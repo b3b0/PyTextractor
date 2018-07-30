@@ -5,10 +5,12 @@ from pytesseract import image_to_string
 
 class PyTextractor:
     def __init__(self, master):
+        
         self.master = master
         master.title("PyTextractor")
         master.geometry("500x500")
         master.resizable(0, 0)
+        
         self.greet_button = Button(master, text="Open Image", command=self.greet)
         self.greet_button.pack()
 
