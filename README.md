@@ -11,7 +11,7 @@ Extract plain text from images!
 - Install the dependencies
 - ```python2 pyextractor.py```
 - Choose the file you wish to extract text from with the **Open Image** button
-- Output is directed ot the text field
+- Output is directed to the text box
 
 ## The Future
 - Plans to create 'installer' for easy use
