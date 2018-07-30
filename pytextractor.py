@@ -5,19 +5,17 @@ from pytesseract import image_to_string
 
 class PyTextractor:
     def __init__(self, master):
-        
         self.master = master
         master.title("PyTextractor")
         master.geometry("500x500")
         master.resizable(0, 0)
-        
-        self.greet_button = Button(master, text="Open Image", command=self.greet)
-        self.greet_button.pack()
+        self.textify_button = Button(master, text="Open Image", command=self.textify)
+        self.textify_button.pack()
 
         self.close_button = Button(master, text="Close", command=master.quit)
         self.close_button.pack()
 
-    def greet(self):
+    def textify(self):
         target = tkFileDialog.askopenfilename()
         textinimage = image_to_string(Image.open(target))
         T.insert(END, textinimage)
@@ -30,7 +28,6 @@ T.pack(side=LEFT, fill=Y)
 S.config(command=T.yview)
 T.config(yscrollcommand=S.set)
 
-my_gui = PyTextractor(root)
+graphical = PyTextractor(root)
 
 root.mainloop()
-
